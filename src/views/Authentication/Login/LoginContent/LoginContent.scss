@@ -1,0 +1,29 @@
+.login {
+   height: 400px;
+
+   h1 {
+      @include font-L;
+      font-weight: 500;
+      margin-bottom: 30px;
+   }
+
+   .form__input {
+      margin-bottom: 20px;
+   }
+
+   .form__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .form__link {
+      @include font-S;
+   }
+
+   .form__errors {
+      color: $neon_red;
+      font-weight: bold;
+      text-align: center;
+   }
+}

@@ -1,0 +1,42 @@
+.compositionTab {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 30px 40px;
+   width: 90%;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      margin-bottom: 10px;
+
+      h1 {
+         color: $text_secondary;
+         @include font-XL;
+      }
+   }
+
+   &__filters {
+      display: flex;
+      margin-bottom: 30px;
+
+      .inputFilter {
+         width: 300px;
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 25px;
+      align-items: stretch;
+   }
+
+   &__emptyState {
+      color: $text_secondary;
+      @include font-M;
+      font-weight: bold;
+   }
+}

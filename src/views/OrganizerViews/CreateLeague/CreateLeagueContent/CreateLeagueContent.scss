@@ -1,0 +1,37 @@
+.createLeague {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 30px;
+   width: 90%;
+
+   &__header {
+      height: 56px;
+      width: 100%;
+      color: $text_secondary;
+      @include font-S;
+      margin-bottom: 10px;
+   }
+
+   &__form {
+      width: 500px;
+
+      .form__input {
+         margin-bottom: 20px;
+      }
+
+      .form__button {
+         display: flex;
+         justify-content: flex-end;
+      }
+
+      .form__errors {
+         margin-top: 20px;
+         display: block;
+         color: $neon_red;
+         font-weight: bold;
+         text-align: center;
+         @include font-S;
+      }
+   }
+}

@@ -1,0 +1,54 @@
+.sidebarLink {
+   display: flex;
+   align-items: center;
+   height: 53px;
+   text-decoration: none;
+   width: 100%;
+   margin-bottom: 10px;
+   padding-left: 15px;
+   color: $text_disabled;
+   transition-duration: 0.5s;
+
+   &:hover {
+      color: $white;
+   }
+
+   svg {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+   }
+
+   &__text {
+      @include font-S;
+      font-weight: 500;
+   }
+
+   &--active {
+      background-color: $cerulean_blue;
+      border-radius: 8px;
+      color: $white;
+   }
+}
+
+/* FADE ANIMATIONS */
+.sidebarLink-collapse-translation-enter {
+   opacity: 0;
+}
+.sidebarLink-collapse-translation-enter-active {
+   opacity: 1;
+   transition: opacity 400ms;
+}
+.sidebarLink-collapse-translation-enter-done {
+   opacity: 1;
+}
+.sidebarLink-collapse-translation-exit {
+   opacity: 1;
+}
+.sidebarLink-collapse-translation-exit-active {
+   opacity: 0;
+   transition: opacity 400ms;
+}
+.sidebarLink-collapse-translation-exit-done {
+   opacity: 0;
+}

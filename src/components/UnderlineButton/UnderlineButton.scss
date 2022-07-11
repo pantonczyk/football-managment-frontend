@@ -1,0 +1,21 @@
+.underlineButton {
+   border: none;
+   outline: none;
+   background-color: transparent;
+   @include font-S;
+   text-decoration: underline;
+   padding: 0;
+   color: #3f51b5;
+
+   &:focus {
+      color: #2967da;
+   }
+
+   &--cursor_pointer {
+      cursor: pointer;
+   }
+
+   &--disabled {
+      cursor: not-allowed;
+   }
+}

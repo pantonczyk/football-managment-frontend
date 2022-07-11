@@ -1,0 +1,47 @@
+.formAddStadiumAvailability {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h1 {
+         @include font-L;
+         color: $text_secondary;
+         margin-bottom: 0;
+      }
+
+      p {
+         @include font-S;
+         width: 600px;
+         text-align: justify;
+         margin-top: 5px;
+      }
+   }
+
+   &__form {
+      width: 500px;
+
+      .form__input {
+         margin-bottom: 20px;
+      }
+
+      .form__button {
+         display: flex;
+         justify-content: flex-end;
+      }
+
+      .form__errors {
+         margin: 20px 0 40px;
+         display: block;
+         color: $neon_red;
+         font-weight: bold;
+         text-align: center;
+         @include font-S;
+      }
+   }
+}

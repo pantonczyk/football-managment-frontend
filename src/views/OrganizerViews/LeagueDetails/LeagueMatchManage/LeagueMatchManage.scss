@@ -1,0 +1,115 @@
+.leagueMatchManage {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 0 30px;
+   width: 90%;
+   margin: auto;
+
+   &__options {
+      display: block;
+   }
+
+   &__matchStatus {
+      text-align: center;
+      color: $neon_red;
+      font-weight: bold;
+
+      p {
+         @include font-L;
+         margin: 10px 0;
+      }
+   }
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+         @include font-XL;
+         color: $text_secondary;
+      }
+
+      .header__button {
+         margin: 0 5px;
+      }
+   }
+
+   &__errorMessage {
+      text-align: center;
+      color: $neon_red;
+      font-weight: bold;
+
+      p {
+         @include font-M;
+         margin: 10px 0;
+      }
+   }
+
+   &__formEditMatch {
+      margin: auto;
+   }
+
+   &__match {
+      margin-left: 10px;
+
+      h2 {
+         @include font-L;
+         color: $text_secondary;
+      }
+
+      .match__overview {
+         display: flex;
+
+         .overview__left {
+            width: 50%;
+         }
+
+         .overview__right {
+            width: 50%;
+         }
+
+         .match__info {
+            @include font-M;
+            color: $text_secondary;
+            font-weight: 500;
+            margin: 7px 0;
+
+            span {
+               color: $text_primary;
+            }
+
+            .info__matchStatus--incompleted {
+               color: $neon_red;
+               font-weight: bold;
+            }
+
+            .info__matchStatus--completed {
+               color: $emerald_green;
+               font-weight: bold;
+            }
+         }
+      }
+   }
+
+   &__matchEvents {
+      margin-top: 40px;
+
+      .matchEvents__header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-left: 10px;
+
+         h2 {
+            @include font-L;
+            color: $text_secondary;
+         }
+      }
+
+      .matchEvents__formAddEvent {
+         margin: auto;
+      }
+   }
+}

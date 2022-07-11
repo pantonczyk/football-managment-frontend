@@ -1,0 +1,96 @@
+.playerDetails {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 30px;
+   width: 90%;
+
+   &__header {
+      height: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .options__btn {
+         margin-right: 10px;
+      }
+   }
+
+   &__title {
+      display: flex;
+      height: 56px;
+      margin-bottom: 10px;
+
+      h1 {
+         @include font-XL;
+         color: $text_secondary;
+      }
+   }
+
+   &__playerInfo {
+      display: flex;
+
+      .playerInfo__data {
+         width: 40%;
+
+         .data__personalData {
+            h2 {
+               @include font-L;
+               color: $text_secondary;
+            }
+
+            p {
+               @include font-S;
+               color: $text_secondary;
+               font-weight: 500;
+               margin: 5px;
+
+               span {
+                  color: $text_primary;
+               }
+            }
+         }
+
+         .data__statistics {
+            h2 {
+               @include font-L;
+               color: $text_secondary;
+            }
+
+            p {
+               @include font-S;
+               color: $text_secondary;
+               font-weight: 500;
+               margin: 5px;
+
+               span {
+                  color: $text_primary;
+               }
+            }
+         }
+      }
+
+      .playerInfo__image {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 60%;
+         margin-top: 30px;
+
+         img {
+            max-height: 300px;
+            max-width: 450px;
+            border-radius: 5px 20px 5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+         }
+
+         .image__deleteBtn {
+            margin-top: 30px;
+         }
+      }
+   }
+
+   &__form {
+      margin-top: 40px;
+   }
+}

@@ -1,0 +1,44 @@
+.leagueTab {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 30px 0;
+   width: 90%;
+
+   &__info {
+      display: flex;
+      margin-bottom: 35px;
+
+      .info__league {
+         width: 40%;
+         padding-right: 20px;
+      }
+
+      .info__teamStats {
+         width: 60%;
+      }
+
+      h2 {
+         color: $text_secondary;
+         @include font-L;
+      }
+
+      .info__text {
+         @include font-S;
+         color: $text_secondary;
+         font-weight: 500;
+
+         span {
+            color: $text_primary;
+         }
+
+         &-justify {
+            text-align: justify;
+         }
+      }
+   }
+
+   &__table {
+      width: 100%;
+   }
+}

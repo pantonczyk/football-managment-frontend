@@ -1,0 +1,39 @@
+.updateLeague {
+   display: flex;
+   flex-direction: column;
+   margin: 10px 0 30px;
+   width: 90%;
+
+   &__header {
+      width: 100%;
+      margin-bottom: 10px;
+
+      h1 {
+         color: $text_secondary;
+         @include font-L;
+      }
+   }
+
+   &__form {
+      width: 500px;
+      margin-left: 10px;
+
+      .form__input {
+         margin-bottom: 20px;
+      }
+
+      .form__button {
+         display: flex;
+         justify-content: flex-end;
+      }
+
+      .form__errors {
+         margin-top: 20px;
+         display: block;
+         color: $neon_red;
+         font-weight: bold;
+         text-align: center;
+         @include font-S;
+      }
+   }
+}

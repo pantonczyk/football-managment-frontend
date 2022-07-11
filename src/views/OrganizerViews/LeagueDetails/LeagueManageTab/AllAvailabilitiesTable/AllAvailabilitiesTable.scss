@@ -1,0 +1,114 @@
+.allAvailabilitiesTable {
+   display: flex;
+   flex-direction: column;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 15px;
+
+      h1 {
+         @include font-L;
+         color: $text_secondary;
+      }
+   }
+
+   &__error {
+      margin: 10px 0;
+      display: block;
+      color: $neon_red;
+      font-weight: bold;
+      text-align: center;
+      @include font-S;
+   }
+
+   &__info {
+      @include font-S;
+
+      p {
+         margin: 10px 10px 20px;
+      }
+   }
+
+   &__table {
+      margin: 0;
+      padding: 0;
+
+      li {
+         border-radius: 4px;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+      }
+
+      .table__header {
+         @include font-S;
+         font-weight: bold;
+         color: $text_secondary;
+         letter-spacing: 1px;
+         padding: 20px 20px;
+         background-color: $alto_white;
+      }
+
+      .table__emptyState {
+         @include font-S;
+         color: $text_secondary;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 15px 0;
+      }
+
+      .table__row {
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 10px 20px;
+         align-items: center;
+
+         &:hover {
+            background-color: $alabaster_white;
+         }
+      }
+
+      .row__col {
+         &-40 {
+            flex-basis: 40%;
+         }
+
+         &-20 {
+            flex-basis: 20%;
+            text-align: center;
+         }
+      }
+
+      @media all and (max-width: 767px) {
+         .table__header {
+            display: none;
+         }
+
+         li {
+            display: block;
+         }
+
+         .table__row {
+            padding: 15px 20px;
+         }
+
+         .row__col {
+            @include font-S;
+            display: flex;
+            padding: 3px 0;
+
+            &:before {
+               color: $text_secondary;
+               font-weight: 500;
+               padding-right: 10px;
+               content: attr(data-label);
+            }
+         }
+      }
+   }
+}

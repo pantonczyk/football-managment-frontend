@@ -1,0 +1,23 @@
+.teamMatchScheduleTab {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 0 30px;
+   width: 90%;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h1 {
+         color: $text_secondary;
+         @include font-XL;
+      }
+
+      .inputFilter {
+         width: 300px;
+      }
+   }
+}

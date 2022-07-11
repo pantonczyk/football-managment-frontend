@@ -1,0 +1,42 @@
+.register {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   &__form {
+      height: 100%;
+   }
+
+   &__inputs {
+      height: 440px;
+      padding-top: 10px;
+   }
+
+   @media (max-width: 768px) {
+      &__inputs {
+         height: 350px;
+      }
+   }
+
+   h1 {
+      @include font-L;
+      font-weight: 500;
+   }
+
+   .form__input {
+      margin-bottom: 20px;
+   }
+
+   .form__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0 20px;
+   }
+
+   .form__errors {
+      display: block;
+      color: $neon_red;
+      font-weight: bold;
+      text-align: center;
+   }
+}

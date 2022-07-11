@@ -1,0 +1,75 @@
+.leagueTeamDetails {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 15px 40px;
+   width: 90%;
+
+   &__header {
+      height: 56px;
+      width: 100%;
+      color: $text_secondary;
+      @include font-M;
+   }
+
+   &__team {
+      display: flex;
+      margin-bottom: 35px;
+
+      h2 {
+         color: $text_secondary;
+         @include font-L;
+      }
+
+      .team__info {
+         width: 50%;
+      }
+
+      .team__statistisc {
+         width: 50%;
+      }
+
+      .info__text {
+         @include font-S;
+         color: $text_secondary;
+         font-weight: 500;
+         margin: 8px 5px;
+
+         span {
+            color: $text_primary;
+         }
+      }
+   }
+
+   &__players {
+      .players__header {
+         height: 56px;
+         width: 100%;
+         color: $text_secondary;
+         @include font-M;
+      }
+
+      .players__filters {
+         display: flex;
+         margin-bottom: 30px;
+
+         .inputFilter {
+            width: 300px;
+         }
+      }
+
+      .players__cards {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+         grid-gap: 25px;
+         align-items: stretch;
+      }
+
+      .players__emptyState {
+         color: $text_secondary;
+         @include font-M;
+         font-weight: 500;
+         margin: 5px;
+      }
+   }
+}

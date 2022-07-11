@@ -1,0 +1,127 @@
+.matchEventsTable {
+   display: flex;
+   flex-direction: column;
+   margin-top: 30px;
+
+   &__errorMessage {
+      text-align: center;
+      color: $neon_red;
+      font-weight: bold;
+
+      p {
+         @include font-M;
+         margin: 15px 0;
+      }
+   }
+
+   &__table {
+      margin: 0;
+      padding: 0;
+
+      li {
+         border-radius: 4px;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+      }
+
+      .table__header {
+         @include font-S;
+         font-weight: bold;
+         color: $text_secondary;
+         letter-spacing: 1px;
+         padding: 20px 20px;
+         background-color: $alto_white;
+      }
+
+      .table__emptyState {
+         @include font-S;
+         color: $text_secondary;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 15px 0;
+      }
+
+      .table__row {
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 5px 20px;
+         cursor: pointer;
+         align-items: center;
+
+         &:hover {
+            background-color: $alabaster_white;
+         }
+      }
+
+      .row__col {
+         text-align: center;
+
+         &-5 {
+            flex-basis: 5%;
+         }
+
+         &-30 {
+            flex-basis: 30%;
+         }
+
+         .delete__icon--enabled {
+            color: #ff2b59;
+         }
+
+         .delete__icon--disabled {
+            color: #b8b8b8;
+         }
+      }
+
+      .row__col--mobileOptions {
+         display: none;
+      }
+
+      @media all and (max-width: 767px) {
+         .table__header {
+            display: none;
+         }
+
+         li {
+            display: block;
+         }
+
+         .table__row {
+            padding: 20px 20px 10px;
+         }
+
+         .row__col {
+            @include font-S;
+            display: flex;
+            padding: 3px 0;
+
+            &:before {
+               color: $text_secondary;
+               font-weight: 500;
+               padding-right: 10px;
+               content: attr(data-label);
+            }
+         }
+
+         .row__coll-options {
+            display: none;
+         }
+
+         .row__col--mobileOptions {
+            display: flex;
+            margin-top: 10px;
+            border-top: 2px solid $alto_white;
+            padding: 10px 0 5px;
+            justify-content: center;
+
+            .mobileOption {
+               margin: 0 10px;
+            }
+         }
+      }
+   }
+}

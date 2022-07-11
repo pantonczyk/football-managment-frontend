@@ -1,0 +1,30 @@
+.stadiumAvailabilityManage {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 10px 40px;
+   width: 90%;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+         color: $text_secondary;
+         @include font-XL;
+      }
+
+      .header_button {
+         margin: 5px;
+      }
+   }
+
+   &__form {
+      margin: auto;
+   }
+
+   &__table {
+      margin-top: 20px;
+   }
+}

@@ -1,0 +1,48 @@
+.leagueOverviewTab {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 15px 0;
+   width: 90%;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      margin: 5px 0 20px;
+
+      h1 {
+         @include font-XL;
+         color: $text_secondary;
+      }
+   }
+
+   &__info {
+      display: flex;
+      margin-left: 10px;
+
+      .info__basic {
+         width: 40%;
+         padding-right: 20px;
+      }
+
+      .info__details {
+         width: 60%;
+      }
+
+      .info__text {
+         @include font-M;
+         color: $text_secondary;
+         font-weight: 500;
+
+         span {
+            color: $text_primary;
+         }
+
+         &-justify {
+            text-align: justify;
+         }
+      }
+   }
+}

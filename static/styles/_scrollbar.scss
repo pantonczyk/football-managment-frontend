@@ -1,0 +1,36 @@
+@mixin scrollBase {
+   -ms-overflow-style: none;
+   scroll-behavior: smooth;
+   scrollbar-width: thin;
+   &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+   }
+}
+
+@mixin scrollVertical {
+   @include scrollBase;
+   overflow-x: hidden;
+   overflow-y: auto;
+   padding-right: 10px;
+   &::-webkit-scrollbar {
+      width: 8px;
+   }
+}
+
+@mixin scrollHorizontal {
+   @include scrollBase;
+   overflow-x: auto;
+   overflow-y: hidden;
+   &::-webkit-scrollbar {
+      height: 8px;
+   }
+}
+
+@mixin scrollBidirectional {
+   @include scrollBase;
+   overflow: auto;
+   &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+   }
+}

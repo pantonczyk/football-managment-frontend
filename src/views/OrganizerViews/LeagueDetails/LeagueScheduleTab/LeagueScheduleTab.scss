@@ -1,0 +1,39 @@
+.leagueScheduleTab {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 0 30px;
+   width: 95%;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h1 {
+         color: $text_secondary;
+         @include font-XL;
+      }
+   }
+
+   &__emptyState {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+         @include font-L;
+         margin: 0;
+         color: $text_secondary;
+      }
+
+      p {
+         margin-top: 5px;
+         @include font-S;
+      }
+
+      .emptyState__button {
+         margin: 10px 0;
+      }
+   }
+}

@@ -1,0 +1,91 @@
+.teamsStatisticsTable {
+   margin: 30px 10px;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+
+      h1 {
+         @include font-L;
+         color: $text_secondary;
+      }
+   }
+
+   &__table {
+      margin: 0;
+      padding: 0;
+      min-width: 1000px;
+
+      li {
+         border-radius: 4px;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+      }
+
+      .table__header {
+         @include font-S;
+         align-items: center;
+         font-weight: bold;
+         color: $text_secondary;
+         padding: 15px 10px;
+         background-color: $alto_white;
+         margin-right: 10px;
+      }
+
+      .table__emptyState {
+         @include font-S;
+         color: $text_secondary;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 15px 0;
+      }
+
+      .table__rows {
+         height: 700px;
+         padding-left: 1px;
+
+         @media (max-height: 1200px) {
+            height: 300px;
+         }
+      }
+
+      .table__row {
+         @include font-XS;
+         font-weight: 500;
+         display: flex;
+         align-items: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 15px 10px;
+         cursor: pointer;
+      }
+
+      .row__col {
+         text-align: center;
+
+         &-3 {
+            flex-basis: 3%;
+         }
+         &-5 {
+            flex-basis: 5%;
+         }
+         &-6 {
+            flex-basis: 6%;
+         }
+         &-10 {
+            flex-basis: 10%;
+         }
+         &-15 {
+            flex-basis: 15%;
+         }
+         &-20 {
+            flex-basis: 20%;
+         }
+      }
+   }
+}

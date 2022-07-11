@@ -1,0 +1,53 @@
+.userProfile {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 15px 30px;
+   width: 90%;
+
+   &__header {
+      height: 56px;
+      width: 100%;
+      color: $text_secondary;
+      @include font-S;
+   }
+
+   &__formPhoto {
+      width: 500px;
+      margin-bottom: 20px;
+
+      h2 {
+         display: block;
+         color: $text_secondary;
+         @include font-M;
+         margin-bottom: 25px;
+      }
+   }
+
+   &__formUserData {
+      width: 500px;
+
+      h2 {
+         display: block;
+         color: $text_secondary;
+         @include font-M;
+         margin-bottom: 25px;
+      }
+   }
+
+   &__formResetPassword {
+      width: 500px;
+
+      h2 {
+         display: block;
+         color: $text_secondary;
+         @include font-M;
+         margin-bottom: 0;
+      }
+
+      .formResetPassword__passwordPolicy {
+         color: $text_secondary;
+         @include font-XS;
+      }
+   }
+}

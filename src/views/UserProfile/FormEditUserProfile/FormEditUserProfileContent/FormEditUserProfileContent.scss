@@ -1,0 +1,21 @@
+.FormEditUserProfileContent {
+   margin: 20px 0;
+   width: 100%;
+
+   .FormEditUserProfileContent__input {
+      margin-bottom: 20px;
+   }
+
+   .FormEditUserProfileContent__button {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .FormEditUserProfileContent__errors {
+      display: block;
+      color: $neon_red;
+      font-weight: bold;
+      text-align: center;
+      @include font-S;
+   }
+}

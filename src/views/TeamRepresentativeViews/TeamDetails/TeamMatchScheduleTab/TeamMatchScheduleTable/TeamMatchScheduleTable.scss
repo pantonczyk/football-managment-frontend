@@ -1,0 +1,116 @@
+.teamMatchScheduleTable {
+   overflow: auto;
+
+   &__table {
+      padding: 2px;
+      min-width: 750px;
+
+      li {
+         border-radius: 4px;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+      }
+
+      .table__header {
+         @include font-M;
+         font-weight: bold;
+         color: $text_secondary;
+         letter-spacing: 1px;
+         padding: 20px 15px;
+         background-color: $alto_white;
+      }
+
+      .table__emptyState {
+         @include font-S;
+         color: $text_secondary;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 15px 0;
+      }
+
+      .table__row {
+         @include font-S;
+         display: flex;
+         align-items: center;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 5px 15px;
+         cursor: pointer;
+      }
+
+      .row__col {
+         text-align: center;
+
+         &-5 {
+            flex-basis: 5%;
+         }
+         &-15 {
+            flex-basis: 15%;
+         }
+         &-20 {
+            flex-basis: 20%;
+         }
+         &-35 {
+            flex-basis: 35%;
+         }
+
+         .resultMatch {
+            margin: 0 15px;
+
+            &-empty {
+               margin: 0 10px;
+            }
+         }
+      }
+
+      .row__collapse {
+         display: flex;
+         flex-direction: column;
+         border-radius: 4px;
+         margin-bottom: 10px;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+         padding: 5px 20px 20px;
+
+         .collapse__header {
+            @include font-L;
+            font-weight: 500;
+            color: $text_secondary;
+            width: 60%;
+            padding: 3px;
+            border-bottom: 2px solid #ebeaea;
+         }
+
+         .collapse__matchEventsList {
+            padding-left: 5px;
+
+            .matchEventsList__item {
+               margin: 5px 0;
+               display: flex;
+               align-items: center;
+
+               span {
+                  @include font-S;
+                  margin: 0 10px;
+               }
+
+               .item__imageEvent {
+                  margin-left: 15px;
+                  width: 20px;
+                  height: 20px;
+               }
+            }
+
+            .matchEventsList__emptyState {
+               @include font-S;
+               color: $text_secondary;
+               margin: 0 5px;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,43 @@
+.navbar {
+   position: relative;
+   height: 55px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 15px 0 25px;
+
+   &__user {
+      display: flex;
+      align-items: center;
+
+      .user__panel {
+         display: flex;
+         align-items: center;
+         margin-right: 15px;
+
+         .user__image {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+         }
+
+         .user__data {
+            display: flex;
+            flex-direction: column;
+            margin-left: 8px;
+
+            .name {
+               @include font-XS;
+               font-weight: 600;
+            }
+
+            .group {
+               @include font-XXS;
+               font-weight: 500;
+               margin-left: 1px;
+               color: $text_secondary;
+            }
+         }
+      }
+   }
+}

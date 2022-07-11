@@ -1,0 +1,19 @@
+.ThemedScrollDiv--horizontal {
+  @include scrollHorizontal;
+}
+
+.ThemedScrollDiv--vertical {
+  @include scrollVertical;
+}
+
+.ThemedScrollDiv--bidirectional {
+  @include scrollBidirectional;
+}
+
+.ThemedScrollDiv--invisible {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+}

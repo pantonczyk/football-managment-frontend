@@ -1,0 +1,28 @@
+@mixin font-XXL {
+   font-size: 48px;
+   line-height: 60px;
+}
+@mixin font-XL {
+   font-size: 24px;
+   line-height: 30px;
+}
+@mixin font-L {
+   font-size: 18px;
+   line-height: 23px;
+}
+@mixin font-M {
+   font-size: 16px;
+   line-height: 20px;
+}
+@mixin font-S {
+   font-size: 14px;
+   line-height: 18px;
+}
+@mixin font-XS {
+   font-size: 12px;
+   line-height: 15px;
+}
+@mixin font-XXS {
+   font-size: 10px;
+   line-height: 13px;
+}

@@ -1,0 +1,77 @@
+.sidebar {
+   position: sticky;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   height: 100%;
+   min-height: 100vh;
+   padding: 10px 15px;
+   display: flex;
+   flex-direction: column;
+   transition: 0.4s ease-in-out;
+   z-index: $z-index10;
+   background-color: $royal_blue;
+   color: $white;
+
+   &--expanded {
+      width: 256px;
+      min-width: 256px;
+   }
+
+   &--collapsed {
+      width: 86px;
+      min-width: 86px;
+   }
+
+   .toggleCollapseButton {
+      position: absolute;
+      top: 65px;
+      right: -25px;
+      height: 27px;
+      width: 27px;
+      background-color: $royal_blue;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+
+      .collapseIcon {
+         transition-duration: 0.5s;
+
+         &--collapsed {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   &:hover .toggleCollapseButton {
+      opacity: 1;
+      pointer-events: all;
+   }
+
+   .sidebar__header {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      .logo {
+         width: 50px;
+         height: 50px;
+      }
+
+      span {
+         @include font-L;
+         font-weight: 900;
+         font-style: italic;
+         text-transform: uppercase;
+         padding-left: 10px;
+         text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.4);
+      }
+   }
+
+   .sidebar__navigation {
+      margin-top: 70px;
+   }
+}
